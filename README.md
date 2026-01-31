@@ -3,7 +3,6 @@
 ## Student Information
 - **Name:** Kavindu Maduhansa Liyanage
 - **Student ID:** IT23551466
-- **Course:** Software Testing / Quality Assurance
 - **Application:** Singlish to Sinhala Translator
 - **URL:** https://www.swifttranslator.com/
 
