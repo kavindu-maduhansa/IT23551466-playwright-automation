@@ -1,361 +1,179 @@
-# 🎭 Playwright Test Automation Project
-### Singlish to Sinhala Translator Testing
+# Playwright Automation Testing Project
 
-![Playwright](https://img.shields.io/badge/Playwright-45ba4b?style=for-the-badge&logo=playwright&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-
----
-
-## 👨‍🎓 Project Information
-
-| Field | Details |
-|-------|---------|
-| **Student ID** | IT23551466 |
-| **Student Name** | Kavindu Maduhansa Liyanage |
-| **Application Under Test** | Singlish to Sinhala Translator |
-| **Website** | [https://www.swifttranslator.com/](https://www.swifttranslator.com/) |
-| **Framework** | Playwright Test Automation |
-| **Language** | JavaScript (ES6 Modules) |
+## Student Information
+- **Name:** Kavindu Maduhansa Liyanage
+- **Student ID:** IT23551466
+- **Course:** Software Testing / Quality Assurance
+- **Application:** Singlish to Sinhala Translator
+- **URL:** https://www.swifttranslator.com/
 
 ---
 
-## 📖 About This Project
+## About This Project
 
-This project contains comprehensive automated test cases for a **Singlish to Sinhala translation web application**. The tests are implemented using the **Playwright test automation framework** with modern JavaScript (ES6 modules), following industry best practices and design patterns.
+This is my automation testing project for the Software Testing course. I've created 36 automated test cases using Playwright to test a Singlish to Sinhala translation website. The tests check if the translator works correctly with different types of inputs.
 
-### Key Features
-✅ **36 Automated Test Cases** covering functional and UI scenarios  
-✅ **Flexible Assertions** for robust test reliability  
-✅ **Helper Functions** for reusable test logic  
-✅ **Parallel Execution** for faster test runs  
-✅ **HTML Reports** with detailed test results  
-✅ **CI/CD Ready** configuration  
+## What I Tested
 
----
+### Positive Tests (24 tests)
+These test cases check if the translator works properly with valid inputs:
+- Basic phrases and sentences
+- Greetings and questions
+- Different verb tenses (past, present, future)
+- Sentences with brand names and place names
+- Text with punctuation and special characters
+- Multi-line inputs
 
-## 🧪 Test Coverage
-
-### Overview
-| Category | Count | Description |
-|----------|-------|-------------|
-| **Positive Functional Tests** | 24 | Valid translation scenarios |
-| **Negative Functional Tests** | 10 | Error handling & edge cases |
-| **UI Tests** | 2 | User interface behavior |
-| **Total** | **36** | **Complete test suite** |
-
-### Positive Functional Tests (24 tests)
-Tests correct translation behavior for various valid inputs:
-- ✓ Basic everyday phrases and sentences
-- ✓ Greetings and polite requests
-- ✓ Different tenses (past, present, future)
-- ✓ Questions and commands
-- ✓ Brand names and place names
-- ✓ Abbreviations and punctuation
-- ✓ Multi-line paragraphs
-- ✓ Currency and date formats
-
-### Negative Functional Tests (10 tests)
-Tests error handling and edge cases:
-- ✓ Joined words without spaces
-- ✓ Slang phrases and typos
-- ✓ Multiple spaces
-- ✓ Empty input
-- ✓ Special characters and heavy punctuation
-- ✓ Mixed English abbreviations
-- ✓ Units with numbers
+### Negative Tests (10 tests)
+These test cases check how the translator handles problematic inputs:
+- Words joined together without spaces
+- Slang and typos
+- Too many spaces
+- Empty input
+- Special characters only
+- Mixed English abbreviations
 
 ### UI Tests (2 tests)
-Tests user interface behavior:
-- ✓ Real-time output updates during slow typing
-- ✓ Output behavior during rapid typing and deletion
+These test cases check the user interface behavior:
+- How the output updates while typing slowly
+- How the output behaves with fast typing and deletion
+
+**Total: 36 test cases**
 
 ---
 
-## 🚀 Getting Started
+## Technologies Used
 
-### Prerequisites
+- **Playwright** - For browser automation and testing
+- **JavaScript** - Programming language
+- **Node.js** - To run the tests
+- **Chromium** - Browser for running tests
 
-Before running the tests, ensure you have the following installed:
+---
 
-| Requirement | Version | Download Link |
-|-------------|---------|---------------|
-| **Node.js** | 16.x or higher | [nodejs.org](https://nodejs.org/) |
-| **npm** | Comes with Node.js | - |
-| **Git** | Latest | [git-scm.com](https://git-scm.com/) |
+## Getting Started
 
-### Installation Steps
+### What You Need
+- Node.js (version 16 or higher)
+- npm (comes with Node.js)
+- A code editor (VS Code recommended)
 
-#### 1️⃣ Clone the repository
+### Installation
+
+1. **Clone this repository**
 ```bash
-git clone <your-repository-url>
-cd IT23551466-playwright-automation-main
+git clone https://github.com/kavindu-maduhansa/IT23551466-playwright-automation.git
+cd IT23551466-playwright-automation
 ```
 
-#### 2️⃣ Install dependencies
+2. **Install the dependencies**
 ```bash
 npm install
 ```
 
-#### 3️⃣ Install Playwright browsers
+3. **Install Playwright browsers**
 ```bash
 npx playwright install
 ```
 
 ---
 
-## 🎮 Running Tests
+## Running the Tests
 
-### Basic Commands
-
-#### Run all tests
+### Run all tests
 ```bash
 npm test
 ```
 
-#### Run tests with browser visible (headed mode)
+### Run tests and see the browser
 ```bash
 npm run test:headed
 ```
 
-#### Run tests in interactive UI mode
+### Run tests in UI mode (interactive)
 ```bash
 npm run test:ui
 ```
 
-#### Run specific test file
-```bash
-npx playwright test tests/singlishTranslator.spec.js
-```
-
-#### Run tests in debug mode
-```bash
-npm run test:debug
-```
-
-### Advanced Commands
-
-#### Run tests on specific browser
-```bash
-npx playwright test --project=chromium
-```
-
-#### Run with multiple workers
-```bash
-npx playwright test --workers=4
-```
-
-#### Run with retries
-```bash
-npx playwright test --retries=2
-```
-
----
-
-## 📊 Viewing Test Results
-
-### HTML Report
-
-After running tests, view the detailed HTML report:
-
+### View the test report
 ```bash
 npm run test:report
-# or
-npx playwright show-report
 ```
-
-The HTML report includes:
-- ✅ Test results with pass/fail status
-- 📸 Screenshots on failure
-- 🎥 Videos on failure (if configured)
-- ⏱️ Test duration and timing
-- 📝 Detailed error messages
-
-### Report Locations
-- **HTML Report:** `playwright-report/index.html`
-- **Test Results:** `test-results/` directory
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
-IT23551466-playwright-automation-main/
 ├── tests/
-│   ├── singlishTranslator.spec.js    # Main test suite (36 tests)
-│   └── getOutputHelper.js            # Helper functions
-├── playwright.config.js              # Playwright configuration
-├── package.json                      # Dependencies & scripts
-├── package-lock.json                 # Lock file
+│   ├── singlishTranslator.spec.js    # All test cases
+│   └── getOutputHelper.js            # Helper function
+├── playwright.config.js              # Test configuration
+├── package.json                      # Dependencies
 └── README.md                         # This file
 ```
 
-### File Descriptions
+---
 
-| File | Purpose |
-|------|---------|
-| `singlishTranslator.spec.js` | Contains all 36 test cases organized by category |
-| `getOutputHelper.js` | Reusable helper function for getting translation output |
-| `playwright.config.js` | Test configuration (browser, timeout, reporters, etc.) |
-| `package.json` | Project metadata, dependencies, and npm scripts |
+## How the Tests Work
+
+All tests follow the same pattern:
+1. Open the translator website
+2. Wait for the page to load
+3. Enter Singlish text
+4. Get the Sinhala output
+5. Check if the output is valid
+
+I used flexible assertions instead of checking exact translations because the translator sometimes adds extra spaces or formatting. This makes the tests more reliable.
 
 ---
 
-## 🛠️ Technologies Used
+## Test Results
 
-| Technology | Purpose | Version |
-|------------|---------|---------|
-| **Playwright** | Test automation framework | ^1.58.0 |
-| **JavaScript** | Programming language | ES6+ |
-| **Node.js** | Runtime environment | 16+ |
-| **npm** | Package manager | Latest |
+All 36 tests are passing successfully. The tests run in about 20-25 seconds on average.
 
 ---
 
-## 🧩 Test Implementation Details
+## What I Learned
 
-### Test Pattern
-All tests follow a consistent pattern:
-1. Navigate to translator page
-2. Wait for page to be ready
-3. Input Singlish text
-4. Get Sinhala output
-5. Validate output with flexible assertions
-
-### Assertion Strategy
-```javascript
-// Positive tests: Output must exist
-expect(output.length).toBeGreaterThan(0);
-
-// Negative/Edge case tests: Output may or may not exist
-expect(output.length).toBeGreaterThanOrEqual(0);
-```
-
-### Helper Function
-The `getOutput()` helper function provides:
-- Robust element selectors with fallbacks
-- Automatic waiting for output to appear
-- Error handling for different element types
-- Consistent timeout behavior
+Through this project, I learned:
+- How to write automated tests using Playwright
+- The difference between positive and negative testing
+- How to handle dynamic web elements
+- How to make tests reliable and maintainable
+- How to organize test code properly
 
 ---
 
-## 📝 Available npm Scripts
+## Challenges I Faced
 
-| Command | Description |
-|---------|-------------|
-| `npm test` | Run all tests |
-| `npm run test:headed` | Run tests with visible browser |
-| `npm run test:ui` | Open Playwright UI mode |
-| `npm run test:report` | Open HTML test report |
-| `npm run test:debug` | Run tests in debug mode |
+1. **Element selectors** - The website doesn't use standard IDs, so I had to use multiple selectors as fallbacks
+2. **Timing issues** - Had to add proper waits for the translation to appear
+3. **Output variations** - The translator sometimes formats output differently, so I used length checks instead of exact matches
 
 ---
 
-## 🔄 CI/CD Integration
+## Future Improvements
 
-### GitHub Actions Example
-
-Create `.github/workflows/playwright.yml`:
-
-```yaml
-name: Playwright Tests
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    
-    steps:
-    - uses: actions/checkout@v3
-    
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18
-    
-    - name: Install dependencies
-      run: npm install
-    
-    - name: Install Playwright browsers
-      run: npx playwright install --with-deps
-    
-    - name: Run Playwright tests
-      run: npm test
-    
-    - name: Upload test results
-      if: always()
-      uses: actions/upload-artifact@v3
-      with:
-        name: playwright-report
-        path: playwright-report/
-```
+If I had more time, I would:
+- Add more edge case tests
+- Test with different browsers (Firefox, Safari)
+- Add performance testing
+- Test with very long inputs
+- Add tests for copy/paste functionality
 
 ---
 
-## 📚 Assignment Information
+## Repository
 
-This project was created as part of a Software Testing / Quality Assurance assignment to demonstrate:
-
-✔️ **Test Automation Skills** using Playwright framework  
-✔️ **Test Design** covering positive, negative, and UI scenarios  
-✔️ **Clean Code Practices** with reusable helper functions  
-✔️ **Version Control** using Git and GitHub  
-✔️ **Documentation** with comprehensive README  
-✔️ **CI/CD Ready** configuration for automated testing  
+GitHub: https://github.com/kavindu-maduhansa/IT23551466-playwright-automation
 
 ---
 
-## 🎯 Test Execution Results
+## License
 
-All 36 tests pass successfully:
-
-```
-✓ 24 Positive Functional Tests
-✓ 10 Negative Functional Tests
-✓ 2 UI Tests
-
-Total: 36 passed (~ 22 seconds)
-```
+This project was created for educational purposes as part of my university coursework.
 
 ---
 
-## 👤 Author
-
-**Student ID:** IT23551466  
-**Name:** Kavindu Maduhansa Liyanage  
-**Course:** Software Testing / Quality Assurance  
-
----
-
-## 📄 License
-
-This project is created for **educational purposes** as part of academic coursework.
-
----
-
-## 🆘 Support
-
-For issues, questions, or contributions:
-1. Review the test results and error messages
-2. Check the HTML report for detailed failure information
-3. Ensure all dependencies are properly installed
-4. Verify Node.js version compatibility
-
----
-
-## 🙏 Acknowledgments
-
-- **Playwright Team** - For the excellent test automation framework
-- **Swift Translator** - For providing the test application
-- **Course Instructors** - For guidance on test automation best practices
-
----
-
-**Last Updated:** January 2026  
-**Project Status:** ✅ Complete - All tests passing
+**Note:** Make sure to run `npm install` and `npx playwright install` before running the tests for the first time.
